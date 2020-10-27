@@ -81,6 +81,7 @@ public class UserController {
     @ApiOperation(value="查询角色", notes="登录账号")
     @PostMapping(value = "/selectByName")
     public String selectByName(@RequestBody User loginUser) throws Exception {
+        //查询角色
         Set<String> list=userServiceImpl.selectByNameRole(loginUser.getUserName());
         return list.toString();
     }
